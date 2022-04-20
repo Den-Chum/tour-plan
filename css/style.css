@@ -627,6 +627,7 @@ img {
 
 .slider {
   width: 728px;
+  height: 450px;
 }
 
 .slider-button {
@@ -657,7 +658,7 @@ img {
 }
 
 .swiper {
-  height: 450px;
+  height: 100%;
   width: 100%;
   position: relative;
   border-radius: 8px;
@@ -792,16 +793,22 @@ img {
 .map {
   width: 347px;
   height: 213px;
-}
-
-.map__twitter {
-  width: 100%;
-  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .slider {
+    width: 590px;
+  }
+  .swiper-slide__img {
+    min-height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -825,6 +832,35 @@ img {
   }
   .search__input {
     width: 34 0px;
+  }
+  .hotel {
+    padding-bottom: 60px;
+  }
+  .hotel-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hotel__slider {
+    margin-bottom: 30px;
+  }
+  .hotel-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .slider {
+    width: 100%;
+  }
+  .booking {
+    width: 340px;
+    max-height: 210px;
+  }
+  .map {
+    width: 340px;
+    max-height: 210px;
   }
 }
 
@@ -871,6 +907,7 @@ img {
   }
   .hotel {
     padding-top: 5px;
+    padding-bottom: 40px;
   }
   .hotel-wrap {
     -webkit-box-pack: justify;
@@ -893,6 +930,52 @@ img {
   }
   .hotel-info__rating {
     display: none;
+  }
+  .hotel-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 450px;
+  }
+  .slider {
+    height: 350px;
+  }
+  .swiper {
+    height: 100%;
+  }
+  .booking {
+    width: 100%;
+  }
+  .map {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider {
+    height: 279px;
+  }
+}
+
+@media (max-width: 320px) {
+  .slider {
+    height: 179px;
+  }
+  .slider-button {
+    background-size: 4px;
+  }
+  .slider-button--prev {
+    left: 6px;
+  }
+  .slider-button--next {
+    right: 6px;
+  }
+  .booking {
+    height: 280px;
+  }
+  .map {
+    height: 280px;
   }
 }
 /*# sourceMappingURL=style.css.map */

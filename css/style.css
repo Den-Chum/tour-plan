@@ -885,4 +885,14 @@ img {
 .booking__icon {
   vertical-align: middle;
 }
+
+.map {
+  width: 347px;
+  height: 213px;
+}
+
+.map__twitter {
+  width: 100%;
+  height: 100%;
+}
 /*# sourceMappingURL=style.css.map */

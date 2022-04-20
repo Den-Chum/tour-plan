@@ -628,6 +628,10 @@ img {
   margin-top: 4px;
 }
 
+.hotel-info__top {
+  margin-bottom: 20px;
+}
+
 .hotel-wrap {
   display: -webkit-box;
   display: -ms-flexbox;

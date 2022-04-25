@@ -582,6 +582,61 @@ img {
           justify-content: space-between;
 }
 
+.hotel-slider {
+  width: 728px;
+  height: 450px;
+}
+
+.hotel-slider__button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 99;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  background-color: transparent;
+  padding: 10px 6.25px;
+}
+
+.hotel-slider__button--next {
+  right: 18px;
+  background-image: url(../img/arrow-next.svg);
+}
+
+.hotel-slider__button--prev {
+  left: 18px;
+  background-image: url(../img/arrow-prev.svg);
+}
+
+.hotel-slider__item {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.hotel-slider__item:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 122, 223, 0.48)), to(rgba(255, 255, 255, 0.128)));
+  background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
+  z-index: 10;
+}
+
 .stars {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -623,60 +678,6 @@ img {
 .rating__counter--small {
   font-size: 10px;
   line-height: 13px;
-}
-
-.slider {
-  width: 728px;
-  height: 450px;
-}
-
-.slider-button {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  z-index: 99;
-  width: 30px;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px;
-  background-color: transparent;
-  padding: 10px 6.25px;
-}
-
-.slider-button--next {
-  right: 18px;
-  background-image: url(../img/arrow-next.svg);
-}
-
-.slider-button--prev {
-  left: 18px;
-  background-image: url(../img/arrow-prev.svg);
-}
-
-.swiper {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  border-radius: 8px;
-  margin: 0;
-}
-
-.swiper:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 122, 223, 0.48)), to(rgba(255, 255, 255, 0.128)));
-  background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
-  z-index: 10;
 }
 
 .booking {
@@ -893,11 +894,153 @@ img {
   cursor: pointer;
 }
 
+.reviews {
+  padding-top: 40px;
+  padding-bottom: 70px;
+  background-color: #F5FAFE;
+}
+
+.reviews-title {
+  font-style: normal;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+
+.reviews-slider__item {
+  width: 731px;
+  position: relative;
+  margin: auto;
+  padding: 0 48px 30px 48px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews-slider__item:before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 47px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 13px;
+  left: 62px;
+  background-image: url(../img/quotation-mark-left.svg);
+  background-repeat: no-repeat;
+}
+
+.reviews-slider__item:after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 47px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 127px;
+  right: 45px;
+  background-image: url(../img/quotation-mark-right.svg);
+  background-repeat: no-repeat;
+}
+
+.reviews-slider__button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 99;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  padding: 10px 6.25px;
+  background-color: transparent;
+}
+
+.reviews-slider__button--prev {
+  background-image: url(../img/arrow-prev-secondary.svg);
+  left: 0;
+}
+
+.reviews-slider__button--next {
+  background-image: url(../img/arrow-next-secondary.svg);
+  right: 0;
+}
+
+.reviews-slider__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews-slider__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.reviews-slider__username {
+  margin-top: 9px;
+  margin-bottom: 10px;
+  color: #EC1F46;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.reviews-slider__date {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.reviews-slider__stars {
+  margin-top: 4px;
+  margin-bottom: 32px;
+}
+
+.reviews-slider__text {
+  max-width: 537px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  text-align: justify;
+  margin: 0 auto 0;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
   }
-  .slider {
+  .hotel-slider {
     width: 590px;
   }
   .swiper-slide__img {
@@ -948,7 +1091,7 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .slider {
+  .hotel-slider {
     width: 100%;
   }
   .booking {
@@ -1035,7 +1178,7 @@ img {
             flex-direction: column;
     min-height: 450px;
   }
-  .slider {
+  .hotel-slider {
     height: 350px;
   }
   .swiper {
@@ -1066,7 +1209,7 @@ img {
 }
 
 @media (max-width: 576px) {
-  .slider {
+  .hotel-slider {
     height: 279px;
   }
 }
@@ -1086,16 +1229,16 @@ img {
 }
 
 @media (max-width: 320px) {
-  .slider {
+  .hotel-slider {
     height: 179px;
   }
-  .slider-button {
+  .hotel-button {
     background-size: 4px;
   }
-  .slider-button--prev {
+  .hotel-button--prev {
     left: 6px;
   }
-  .slider-button--next {
+  .hotel-button--next {
     right: 6px;
   }
   .booking {

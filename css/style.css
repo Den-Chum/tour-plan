@@ -884,7 +884,9 @@ img {
 
 .subscribe__button {
   position: absolute;
+  max-width: 165px;
   min-width: 65px;
+  padding: 0 18px 0 18px;
   top: 0;
   right: 0;
   height: 100%;
@@ -900,18 +902,29 @@ img {
   background-color: #F5FAFE;
 }
 
+.reviews-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .reviews-title {
   font-style: normal;
   font-size: 36px;
   line-height: 45px;
-  text-align: center;
   margin-top: 0;
   margin-bottom: 70px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .reviews-slider__item {
-  width: 731px;
+  max-width: 731px;
   position: relative;
   margin: auto;
   padding: 0 48px 30px 48px;
@@ -1043,7 +1056,7 @@ img {
   .hotel-slider {
     width: 590px;
   }
-  .swiper-slide__img {
+  .hotel-slider__img {
     min-height: 100%;
     width: 100%;
     -o-object-fit: cover;
@@ -1101,6 +1114,9 @@ img {
   .map {
     width: 340px;
     max-height: 210px;
+  }
+  .reviews-slider__item {
+    max-width: 579px;
   }
 }
 
@@ -1206,11 +1222,48 @@ img {
   .newsletter-title {
     margin-bottom: 37px;
   }
+  .reviews-title {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+  .reviews-slider__item {
+    max-width: 455px;
+  }
+  .reviews-slider__item:after, .reviews-slider__item:before {
+    display: none;
+  }
+  .reviews-slider__button {
+    top: 42%;
+  }
 }
 
 @media (max-width: 576px) {
   .hotel-slider {
     height: 279px;
+  }
+  .reviews-title {
+    font-size: 26px;
+    max-width: 346px;
+    margin-bottom: 42px;
+  }
+  .reviews-slider__item {
+    max-width: 405px;
+    padding: 0 31px 30px 31px;
+  }
+  .reviews-slider__button {
+    top: 24px;
+  }
+  .reviews-slider__button--prev {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    margin-left: -75px;
+  }
+  .reviews-slider__button--next {
+    right: 50%;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+    margin-right: -75px;
   }
 }
 
@@ -1246,6 +1299,11 @@ img {
   }
   .map {
     height: 280px;
+  }
+  .reviews-title {
+    font-size: 18px;
+    line-height: 23px;
+    max-width: 245px;
   }
 }
 /*# sourceMappingURL=style.css.map */

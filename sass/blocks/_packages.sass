@@ -1,5 +1,5 @@
 .packages
-  padding: 40px
+  padding-top: 40px
   padding-bottom: 70px
   &-title
     font-size: 36px
@@ -10,14 +10,16 @@
     margin-bottom: 65px
   &-grid
     display: grid
-    grid-template-columns: 350px 350px 350px
+    grid-template-columns: repeat(3, minmax(250px, 350px))
     grid-template-rows: 500px 500px
+    grid-auto-rows: 500px
     column-gap: 30px
     row-gap: 20px
     &__card
       display: flex
       flex-direction: column
       border-radius: 8px
+      height: 500px
       overflow: hidden
       &--deployed
         flex-direction: row
@@ -29,14 +31,14 @@
       width: 100%
       &--strong
     &__info
-      width: 350px
+      max-width: 350px
       height: 100%
       padding: 30px 21px 25px 32px
       background-color: $black
       color: $light
       &--deployed
-        width: 50%
         padding: 45px 21px 30px 43px
+        max-width: 377px
     &__stars
       margin-bottom: 5px
     &__title
@@ -54,31 +56,32 @@
       line-height: 160.6%
       margin-top: 0
       margin-bottom: 34px
-  .img
-    &-block
-      position: relative
-      width: 350px
-      min-height: 250px
+.img
+  &-block
+    position: relative
+    max-width: 350px
+    min-height: 250px
+    &--deployed
+      height: 500px
+      width: 50%
+    &__offer
+      position: absolute
+      top: 30px
+      left: 0
+      padding: 4px 9px
+      font-style: normal
+      font-size: 8px
+      line-height: 10px
+      color: $light
+      background-color: $primary
+      border-radius: 0px 4px 4px 0px
       &--deployed
-        height: 500px
-        width: 50%
-      &__offer
-        position: absolute
-        top: 30px
-        left: 0
-        padding: 4px 9px
-        font-style: normal
-        font-size: 8px
-        line-height: 10px
-        color: $light
-        background-color: $primary
-        border-radius: 0px 4px 4px 0px
-        &--deployed
-          top: 34px
-          font-size: 12px
-          line-height: 15px
-          padding: 8px 20px 7px 11px
-  .person-room
+        top: 34px
+        font-size: 12px
+        line-height: 15px
+        padding: 8px 20px 7px 11px
+.person
+  &-room
     min-height: 67px
     margin-bottom: 24px
     display: flex
@@ -87,33 +90,33 @@
     justify-content: space-between
     &--deployed
       margin-bottom: 37px
-    &__text
-      font-size: 12px
-      line-height: 15px
-    &__icon
-      margin-right: 14px
-      vertical-align: middle
-  .pricetag
-    display: flex
-    justify-content: space-between
-    align-items: flex-end
-    &__old-price
-      display: block
-      margin-bottom: 5px
-      font-size: 14px
-      line-height: 18px
-      text-decoration-line: line-through
-    &__price
-      font-size: 24px
-      line-height: 30px
-    &-button
-      padding: 10px 26px
-      max-width: 160px
-      color: inherit
-      background-color: $primary
-      border: none
-      font-style: normal
-      font-size: 14px
-      line-height: 19px
-      border-radius: 4px
-      cursor: pointer
+  &__text
+    font-size: 12px
+    line-height: 15px
+  &__icon
+    margin-right: 14px
+    vertical-align: middle
+.pricetag
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  &__old-price
+    display: block
+    margin-bottom: 5px
+    font-size: 14px
+    line-height: 18px
+    text-decoration-line: line-through
+  &__price
+    font-size: 24px
+    line-height: 30px
+  &-button
+    padding: 10px 26px
+    max-width: 160px
+    color: inherit
+    background-color: $primary
+    border: none
+    font-style: normal
+    font-size: 14px
+    line-height: 19px
+    border-radius: 4px
+    cursor: pointer

@@ -1143,7 +1143,7 @@ img {
 }
 
 .packages {
-  padding: 40px;
+  padding-top: 40px;
   padding-bottom: 70px;
 }
 
@@ -1159,10 +1159,11 @@ img {
 .packages-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 350px 350px 350px;
-      grid-template-columns: 350px 350px 350px;
+  -ms-grid-columns: (minmax(250px, 350px))[3];
+      grid-template-columns: repeat(3, minmax(250px, 350px));
   -ms-grid-rows: 500px 500px;
       grid-template-rows: 500px 500px;
+  grid-auto-rows: 500px;
   -webkit-column-gap: 30px;
           column-gap: 30px;
   row-gap: 20px;
@@ -1177,6 +1178,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 8px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -1201,7 +1203,7 @@ img {
 }
 
 .packages-grid__info {
-  width: 350px;
+  max-width: 350px;
   height: 100%;
   padding: 30px 21px 25px 32px;
   background-color: #0A223D;
@@ -1209,8 +1211,8 @@ img {
 }
 
 .packages-grid__info--deployed {
-  width: 50%;
   padding: 45px 21px 30px 43px;
+  max-width: 377px;
 }
 
 .packages-grid__stars {
@@ -1238,18 +1240,18 @@ img {
   margin-bottom: 34px;
 }
 
-.packages .img-block {
+.img-block {
   position: relative;
-  width: 350px;
+  max-width: 350px;
   min-height: 250px;
 }
 
-.packages .img-block--deployed {
+.img-block--deployed {
   height: 500px;
   width: 50%;
 }
 
-.packages .img-block__offer {
+.img-block__offer {
   position: absolute;
   top: 30px;
   left: 0;
@@ -1262,14 +1264,14 @@ img {
   border-radius: 0px 4px 4px 0px;
 }
 
-.packages .img-block__offer--deployed {
+.img-block__offer--deployed {
   top: 34px;
   font-size: 12px;
   line-height: 15px;
   padding: 8px 20px 7px 11px;
 }
 
-.packages .person-room {
+.person-room {
   min-height: 67px;
   margin-bottom: 24px;
   display: -webkit-box;
@@ -1287,21 +1289,21 @@ img {
           justify-content: space-between;
 }
 
-.packages .person-room--deployed {
+.person-room--deployed {
   margin-bottom: 37px;
 }
 
-.packages .person-room__text {
+.person__text {
   font-size: 12px;
   line-height: 15px;
 }
 
-.packages .person-room__icon {
+.person__icon {
   margin-right: 14px;
   vertical-align: middle;
 }
 
-.packages .pricetag {
+.pricetag {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1313,7 +1315,7 @@ img {
           align-items: flex-end;
 }
 
-.packages .pricetag__old-price {
+.pricetag__old-price {
   display: block;
   margin-bottom: 5px;
   font-size: 14px;
@@ -1322,12 +1324,12 @@ img {
           text-decoration-line: line-through;
 }
 
-.packages .pricetag__price {
+.pricetag__price {
   font-size: 24px;
   line-height: 30px;
 }
 
-.packages .pricetag-button {
+.pricetag-button {
   padding: 10px 26px;
   max-width: 160px;
   color: inherit;
@@ -1357,12 +1359,21 @@ img {
     width: 225px;
     height: 225px;
   }
+  .packages-grid__text {
+    margin-bottom: 20px;
+  }
+  .packages-grid__info--deployed {
+    max-width: 318px;
+  }
+  .person-room--deployed {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 992px) {
   .container,
   .newsletter-wrap {
-    max-width: 700px;
+    max-width: 730px;
   }
   .navbar-top {
     padding-top: 30px;
@@ -1424,6 +1435,19 @@ img {
   .card {
     width: 339px;
     height: 255px;
+  }
+  .packages-title {
+    margin-bottom: 50px;
+  }
+  .packages-grid {
+    -ms-grid-columns: (350px)[2];
+        grid-template-columns: repeat(2, 350px);
+  }
+  .packages-grid__info--deployed {
+    max-width: 365px;
+  }
+  .img-block--deployed {
+    max-width: 365px;
   }
 }
 
@@ -1546,6 +1570,42 @@ img {
     width: 255px;
     height: 255px;
   }
+  .packages-grid {
+    -ms-grid-columns: 50%;
+        grid-template-columns: 50%;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+  }
+  .packages-grid__info {
+    max-width: 288px;
+  }
+  .packages-grid__info--deployed {
+    padding: 45px 11px 20px 23px;
+    max-width: 288px;
+  }
+  .packages-grid__text {
+    font-size: 12px;
+  }
+  .img-block {
+    max-width: 288px;
+  }
+  .img-block--deployed {
+    max-width: 298px;
+  }
+  .person-room__text {
+    font-size: 12px;
+  }
+  .pricetag {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pricetag__old-price {
+    font-size: 12px;
+  }
+  .pricetag__price {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1579,6 +1639,13 @@ img {
   .card {
     width: 100%;
     height: 255px;
+  }
+  .packages-grid {
+    -ms-grid-columns: 250px;
+        grid-template-columns: 250px;
+    -ms-grid-rows: 500px 500px 500px;
+        grid-template-rows: 500px 500px 500px;
+    grid-auto-flow: column;
   }
 }
 

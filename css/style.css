@@ -1249,6 +1249,7 @@ img {
 .img-block--deployed {
   height: 500px;
   width: 50%;
+  min-width: 361px;
 }
 
 .img-block__offer {
@@ -1367,6 +1368,9 @@ img {
   }
   .person-room--deployed {
     margin-bottom: 30px;
+  }
+  .img-block--deployed {
+    min-width: 251px;
   }
 }
 

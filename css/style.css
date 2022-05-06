@@ -1574,8 +1574,8 @@ img {
     height: 255px;
   }
   .packages-grid {
-    -ms-grid-columns: 50%;
-        grid-template-columns: 50%;
+    -ms-grid-columns: 48.5% 48.5%;
+        grid-template-columns: 48.5% 48.5%;
     -webkit-column-gap: 15px;
             column-gap: 15px;
   }
@@ -1584,7 +1584,7 @@ img {
   }
   .packages-grid__info--deployed {
     padding: 45px 11px 20px 23px;
-    max-width: 288px;
+    max-width: 50%;
   }
   .packages-grid__text {
     font-size: 12px;
@@ -1644,11 +1644,10 @@ img {
     height: 255px;
   }
   .packages-grid {
-    -ms-grid-columns: 250px;
-        grid-template-columns: 250px;
+    -ms-grid-columns: repat(auto-fill, 92%);
+        grid-template-columns: repat(auto-fill, 92%);
     -ms-grid-rows: 500px 500px 500px;
         grid-template-rows: 500px 500px 500px;
-    grid-auto-flow: column;
   }
 }
 

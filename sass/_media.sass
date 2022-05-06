@@ -161,13 +161,13 @@
     height: 255px
   .packages
     &-grid
-      grid-template-columns: 50%
+      grid-template-columns: 48.5% 48.5%
       column-gap: 15px
       &__info
         max-width: 288px
         &--deployed
           padding: 45px 11px 20px 23px
-          max-width: 288px
+          max-width: 50%
       &__text
         font-size: 12px
   .img
@@ -214,9 +214,8 @@
     height: 255px
   .packages
     &-grid
-      grid-template-columns: 250px
+      grid-template-columns: repat(auto-fill, 92%)
       grid-template-rows: 500px 500px 500px
-      grid-auto-flow: column
 @media (max-width: 378px)
   .subscribe
     width: 100%
